@@ -1,5 +1,6 @@
 'use strict'
 
+// Cumple OPEN/CLOSE, Liskov y SRP ya que hemos implementado dos tipos de premios que son intercambiables.
 export class TicketPrizedAbstraction{
     #ticket
     #prizedNumber

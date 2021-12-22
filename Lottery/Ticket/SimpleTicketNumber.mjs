@@ -6,10 +6,8 @@ class SimpleTicketNumber extends TicketNumberAbstraction{
     #numberFormatter
 
     constructor(number, numberFormatter){
-        super(number, numberFormatter)
-
+        super(number)
         this.#numberFormatter = numberFormatter
-
         this.validateNumber()
     }
 
@@ -17,7 +15,7 @@ class SimpleTicketNumber extends TicketNumberAbstraction{
         return this.#numberFormatter.formatPaddingZeros(this.number, TICKET_NUMBER_LENGHT);
     }
 
-    /* SRP: Class to handle numbers into TickerNumberFormatter
+    /* SRP: Class to handle numbers into TickerNumberFormatter (Violamos Single Responsability Principle)
 
     formatNumberAsStringPaddingZeros(){
         let num = this.number.toString();

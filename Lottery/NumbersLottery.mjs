@@ -6,8 +6,10 @@ class NumbersLottery{
     #roller
 
     constructor(roller){
+        // Comprobamos que roller es una instancia de RollerInterface ya que JS es un lenguaje de tipado dinámico
+        // Principio de inversión de dependencias
         if (false === roller instanceof RollerInterface) {
-            throw new Error(`${this.constructor.name} class expect argument at position 0 be RollerInterface type`)
+            throw new Error(`${this.constructor.name} class expect argument at position 0 to be RollerInterface type`)
         }
 
         this.#roller = roller
